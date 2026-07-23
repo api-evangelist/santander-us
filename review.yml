@@ -1,0 +1,107 @@
+aid: santander-us
+name: Santander US
+review:
+  question: Does Santander Bank, N.A. (US) expose a documented public first-party developer API?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Santander Bank, N.A. — the US retail and commercial banking subsidiary of
+    Banco Santander S.A. (santanderbank.com) — publishes NO public, first-party
+    developer API for its US franchise. There is no live US developer portal:
+    developer.santanderbank.com does not resolve (curl 000), santanderbank.com/developers
+    and santanderbank.com/api both return 404, and the site sitemap (sitemap-en.xml)
+    contains zero developer, /api, or open-banking pages. A host at
+    api.santanderbank.com responds 403 but is not a documented, browsable developer
+    portal and exposes no public API reference or specification.
+
+    US open finance is voluntary and fragmented — there is no single mandated
+    open-banking contract as in the UK (OBIE) or Australia (CDR). Santander US's
+    consumer-permissioned data is reached through AGGREGATORS rather than a direct
+    first-party API. Plaid documents connectivity to "Santander - Personal" for the
+    products Assets, Auth, Balance, and Transactions. No first-party FDX (Financial
+    Data Exchange) participation and no published CFPB Section 1033 (Personal
+    Financial Data Rights) posture were found for the US retail entity specifically;
+    broader US data sharing is moving industry-wide through aggregator networks
+    (Plaid; FDX-standard networks such as Akoya).
+
+    Distinct-entity caution: Santander's UK developer portal
+    (developer.santander.co.uk) and the group's Corporate & Investment Banking API
+    marketplace (apimarket.santandercib.com) are operated by SEPARATE Banco Santander
+    legal entities and are not the US retail bank's surface; they were deliberately
+    NOT attributed to Santander US. No downloadable OpenAPI/Swagger was harvested
+    because none is published for the US entity.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: ''
+    portalConfirmedLive200: false
+    downloadableOpenAPI: false
+    specProvenance: none
+    fdxParticipantDocumented: false
+    section1033PostureDocumented: false
+    aggregatorAccessOnly: true
+    aggregators:
+      - name: Plaid
+        institution: Santander - Personal
+        products: [Assets, Auth, Balance, Transactions]
+        url: https://plaid.com/institutions/santander-personal/
+    authModel: not documented for a first-party US API (aggregator-mediated, consumer-permissioned)
+    charterType: National bank (National Association, N.A.) — OCC-regulated
+    ownership: Subsidiary of Banco Santander S.A. (Spain)
+    positioning: Super-regional bank, Northeast US branch network
+  probes:
+    - url: https://developer.santanderbank.com
+      status: '000'
+      note: DNS/connection does not resolve — no US developer subdomain.
+    - url: https://api.santanderbank.com
+      status: '403'
+      note: Host responds but is not a documented, browsable developer portal or public API reference.
+    - url: https://www.santanderbank.com/developers
+      status: '404'
+    - url: https://www.santanderbank.com/api
+      status: '404'
+    - url: https://www.santanderbank.com
+      status: '200'
+      note: Live marketing/retail site; no developer, API, or open-banking pages in sitemap-en.xml.
+    - url: https://www.santanderbank.com/online-privacy-policy
+      status: '200'
+    - url: https://www.santanderbank.com/terms-and-conditions
+      status: '200'
+    - url: https://apimarket.santandercib.com/scib/external/api
+      status: '200'
+      note: Santander Corporate & Investment Banking marketplace — separate legal entity, NOT the US retail bank.
+    - url: https://developer.santander.co.uk/sanuk/external/
+      status: '403'
+      note: Santander UK developer portal — separate legal entity, NOT the US retail bank.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No first-party US REST API is publicly documented.
+    - protocol: FDX
+      scheme: https
+      documented: false
+      note: No documented first-party FDX-conformant data-access API for the US retail entity.
+sources:
+  - url: https://www.santanderbank.com
+    type: Website
+    note: US retail/commercial banking site for Santander Bank, N.A.; no developer program.
+  - url: https://plaid.com/institutions/santander-personal/
+    type: DataAggregator
+    note: Plaid supports Santander - Personal (Assets, Auth, Balance, Transactions) in the US.
+  - url: https://www.openbankingtracker.com/provider/santander
+    type: Reference
+    note: Third-party tracker; Santander developer surfaces are UK/CIB, not US retail.
+  - url: https://en.wikipedia.org/wiki/Santander_Bank
+    type: Reference
+    note: Santander Bank, N.A. profile — Boston HQ, Northeast US, subsidiary of Banco Santander.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    Identity-only bootstrap. apis[] left empty because Santander Bank, N.A. exposes
+    no public first-party developer API in the US; the honest open-finance posture
+    is aggregator-mediated (Plaid confirmed). No OpenAPI harvested because none is
+    published for the US entity. UK and CIB portals were intentionally excluded as
+    separate legal entities.

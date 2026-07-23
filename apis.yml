@@ -1,0 +1,51 @@
+aid: santander-us
+url: https://raw.githubusercontent.com/api-evangelist/santander-us/refs/heads/main/apis.yml
+name: Santander US
+kind: company
+description: >-
+  Santander Bank, N.A. (santanderbank.com) is the US retail and commercial
+  banking subsidiary of Spain's Banco Santander S.A., headquartered in Boston,
+  Massachusetts. It is a nationally chartered bank (National Association,
+  regulated by the OCC) operating a branch network across the Northeast US
+  (Massachusetts, New Hampshire, Rhode Island, Connecticut, New York, New
+  Jersey, Pennsylvania and Delaware), which positions it as a super-regional
+  bank. Unlike UK and Australian institutions bound by mandated open-banking
+  contracts, and unlike US banks such as Capital One or Chase that publish
+  first-party developer portals, Santander Bank N.A. exposes no public,
+  first-party developer API for its US retail franchise: developer.santanderbank.com
+  does not resolve, and the site publishes no developers/API/open-banking pages.
+  Consumer-permissioned data access in the US is available today through
+  aggregators rather than a direct API — Plaid supports "Santander - Personal"
+  (Assets, Auth, Balance and Transactions). Santander's UK developer portal
+  (developer.santander.co.uk) and the group's Corporate & Investment Banking API
+  marketplace (apimarket.santandercib.com) are operated by separate legal
+  entities and are not the US retail bank's surface. This record is an honest
+  identity profile of a super-regional bank whose US open-finance posture is
+  aggregator-mediated, with no documented first-party developer program.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- Super-Regional Bank
+- Retail Banking
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.santanderbank.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/santander-bank-na
+- type: PrivacyPolicy
+  url: https://www.santanderbank.com/online-privacy-policy
+- type: TermsOfService
+  url: https://www.santanderbank.com/terms-and-conditions
+- type: Support
+  url: https://www.santanderbank.com/personal/security-center
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
