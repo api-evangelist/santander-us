@@ -1,4 +1,4 @@
-# Santander US (santander-us)
+# Santander US
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,50 +64,83 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Santander Bank, N.A. (santanderbank.com) is the US retail and commercial banking subsidiary of Spain's Banco Santander S.A., headquartered in Boston, Massachusetts. It is a nationally chartered bank (National Association, regulated by the OCC) operating a branch network across the Northeast US, positioning it as a super-regional bank.
+Santander Bank, N.A. (santanderbank.com) is the US retail and commercial banking subsidiary of Spain's Banco Santander S.A., headquartered in Boston, Massachusetts. It is a nationally chartered bank (National Association, regulated by the OCC) operating a branch network across the Northeast US (Massachusetts, New Hampshire, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania and Delaware), which positions it as a super-regional bank. Unlike UK and Australian institutions bound by mandated open-banking contracts, and unlike US banks such as Capital One or Chase that publish first-party developer portals, Santander Bank N.A. exposes no public, first-party developer API for its US retail franchise: developer.santanderbank.com does not resolve, and the site publishes no developers/API/open-banking pages. Consumer-permissioned data access in the US is available today through aggregators rather than a direct API — Plaid supports "Santander - Personal" (Assets, Auth, Balance and Transactions). Santander's UK developer portal (developer.santander.co.uk) and the group's Corporate & Investment Banking API marketplace (apimarket.santandercib.com) are operated by separate legal entities and are not the US retail bank's surface. This record is an honest identity profile of a super-regional bank whose US open-finance posture is aggregator-mediated, with no documented first-party developer program.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/santander-us/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/santander-us/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Super-Regional Bank · Consumer Banking · Open Finance
 
-## Open-Finance / API Posture
+## Santander US on APIs.io
 
-The US retail franchise (Santander Bank, N.A.) exposes **no public, first-party developer API**. `developer.santanderbank.com` does not resolve, `santanderbank.com/developers` and `santanderbank.com/api` return 404, and the site's sitemap publishes no developer, API, or open-banking pages.
+Everything profiled for Santander US is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/santander-us/](https://apis.io/providers/santander-us/)** — or go straight to one of the APIs or properties below.
 
-US open finance is voluntary and fragmented — there is no single mandated open-banking contract as in the UK or Australia. Santander US's consumer-permissioned data is reached today through **aggregators rather than a direct API**:
+### Published properties
 
-- **Plaid** supports "Santander - Personal" for Assets, Auth, Balance, and Transactions.
-- No documented first-party FDX (Financial Data Exchange) participation or published CFPB Section 1033 posture was found for the US retail entity; broader US data sharing is moving industry-wide through aggregator networks (Plaid; FDX/Akoya).
-- No downloadable OpenAPI/Swagger specification is published for the US entity.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Note on related-but-distinct entities: Santander's **UK developer portal** ([developer.santander.co.uk](https://developer.santander.co.uk/sanuk/external/)) and the group's **Corporate & Investment Banking API marketplace** ([apimarket.santandercib.com](https://apimarket.santandercib.com/scib/external/api)) are operated by separate Banco Santander legal entities and are **not** the US retail bank's surface. They are intentionally not listed as Santander US APIs.
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Financial Services
-- Banking
-- United States
-- Super-Regional Bank
-- Retail Banking
-- Open Finance
-- Data Aggregation
+- [Santander Us Domain Security](https://apis.io/security/santander-us/santander-us-domain-security/)
 
-## Timestamps
+## Where to find this API
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
-
-## APIs
-
-No public first-party developer APIs. `apis[]` is intentionally empty — Santander US consumer data access is aggregator-mediated (see Plaid above), not a documented first-party API surface.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.santanderbank.com)
-- [LinkedIn](https://www.linkedin.com/company/santander-bank-na)
-- [Privacy Policy](https://www.santanderbank.com/online-privacy-policy)
-- [Terms of Service](https://www.santanderbank.com/terms-and-conditions)
-- [Support / Security Center](https://www.santanderbank.com/personal/security-center)
+- [Support](https://www.santanderbank.com/personal/security-center)
+- [Blog](https://www.santanderbank.com/private-client/insights/)
+- [Terms of service](https://www.santanderbank.com/terms-and-conditions)
+- [Privacy policy](https://www.santanderbank.com/online-privacy-policy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.1** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/santander-us/](https://apis.io/providers/santander-us/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Santander US: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/santander-us/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
